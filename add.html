@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+   <title>INFO KS</title>
+   <meta charset="UTF-8" />
+   <link rel="stylesheet" type="text/css" href="css/meinStilAdd.css" />
+   
+</head>
+<body>
+	<div class="wrapper">
+	
+   	<div class="main" id="Suchbox">
+   		<form id="Suche">
+				<span>Was ist</span>    			
+    			<input type="text" name="ersterSummand" value="" />
+    			<span>+</span>
+    			<input type="text" name="zweiterSummand" value="" />
+    			<span class="rechts">?</span>
+    			<button type="button" onclick="berechneErgebnis()">Berechne!</button>
+			</form>
+			
+			<script>
+    			function berechneErgebnis() { 			
+        			var eingabeErsterSummand = document.getElementById("Suche").ersterSummand.value;
+        			var eingabeZweiterSummand = document.getElementById("Suche").zweiterSummand.value;
+        			var ergebnis = Number(eingabeErsterSummand) + Number(eingabeZweiterSummand);
+        			document.getElementById("Antwort").innerHTML = "Was ist "+eingabeErsterSummand+"+"+eingabeZweiterSummand+"? </p><p> Die Antwort lautet:<span class='ergebnis'> "+ergebnis+"</span> .</p>";
+        			document.getElementById("Antwortbox").style.background = "rgba(255,255,255,0.9)";
+        			document.getElementById("Antwortbox").style.visibility = "visible";
+        			document.getElementById("Suchbox").style.marginTop = "15px";
+        		return false;
+        		}
+     		</script>
+      </div>  
+        
+      <div class="answer" id="Antwortbox">   
+      	<p id="Antwort"></p>  
+      	
+      </div>
+      
+      <div class="footer">
+      	<span class="left">Diese Seite wurde gestaltet von <a href="DEINE SEITE"> &lt;DeinName&gt;</a>.</span>
+      	<span class="right">Hintergrundbild: <a href="https://flic.kr/p/tJGfh9">Malte Hempel</a></span> 
+      </div>  
+          
+	</div>
+</body>
+</html>
